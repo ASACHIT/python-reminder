@@ -15,9 +15,9 @@ Here's a basic reminder tool written in Python that speaks to the user and sends
   python3 remind.py # shows command guide
 ```
     
-## images
-### command
+## Images
+### Command
 ![terminal](https://media.discordapp.net/attachments/884460118715019274/889581518085836840/unknown.png)    
 
-## notification
+## Notification
 ![notification](https://cdn.discordapp.com/attachments/884460118715019274/889583087841849344/reminder.png)
