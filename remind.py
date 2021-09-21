@@ -18,14 +18,18 @@ def speak(text):
     engine.runAndWait()
 
 
+def no_argv_passed():
+    print("😩 Ahh, Arguments were not properly passed.🥺")
+    print("""Command format - python remind.py <time in h,m,s> <"task"> ✨""")
+
+
 def remind_me():
     # checks if command arguments were passed or not
     try:
         time = sys.argv[1]
         task = sys.argv[2]
     except IndexError:
-        print("😩 Ahh! No command Arguments were passed !🥺")
-        print("""Command format - python remind.py <time in h,m,s> <"task"> ✨""")
+        no_argv_passed()
         exit()
 
     # converts input time to second
@@ -36,15 +40,19 @@ def remind_me():
         remind_after = int(number) * 60
     elif time_unit == "s":
         remind_after = int(number)
+    else:
+        no_argv_passed()
+        exit()
 
     print(f"😃 Reminder Set For {task} After {remind_after} Seconds🕐 From Now !")
 
     import time
+
     time.sleep(remind_after)
     speak(f"Hey, you have a reminder set for {task}")
 
     notification.show_toast(
-        threaded=True, title="Reminder ⏰", msg=task, duration=10
+        threaded=True, title="Reminder ⏰", msg=task
     )  # pushes notification
 
 
