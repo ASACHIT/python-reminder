@@ -1,2 +1,1 @@
-pyttsx3==2.90
-win10toast
+plyer==2.0.0
