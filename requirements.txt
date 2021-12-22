@@ -1,2 +1,5 @@
-pyttsx3==2.90
-win10toast
+colorama==0.4.4
+jeepney==0.7.1
+loguru==0.5.3
+notify-py==0.3.3
+pytimeparse==1.1.8
